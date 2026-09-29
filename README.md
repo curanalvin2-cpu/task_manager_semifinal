@@ -53,7 +53,7 @@ Technical Details
 Dashboard Walkthrough
 
 1. Add a New Task
-![Add a Task](Screenshots/AddTask/add-task.png)
+![Add a Task](add-task.png)
 
 How it works:
 - Enter a task title inside the Task Name input field (required).
@@ -63,7 +63,7 @@ How it works:
 
 
 2. Review and Manage Tasks
-![Review and Manage Tasks](Screenshots/AddTask/review-manage-task.png)
+![Review and Manage Tasks](review-manage-task.png)
 
 How it works:
 - The Task List table displays all stored tasks with columns for Task ID (#), Task Name, Description, Status, Due Date, and Action controls.
@@ -71,7 +71,7 @@ How it works:
 - Each row features an Edit button to modify task information and a Delete button to remove the record.
 
 3. Edit Existing Task
-![Edit a Task](Screenshots/AddTask/edit-task.png)
+![Edit a Task](edit-task.png)
 
 How it works:
 - Clicking the Edit button loads the task details into an editable form.
@@ -80,7 +80,7 @@ How it works:
 
 
 4. Delete Confirmation
-![Confirm Task Deletion](Screenshots/AddTask/delete-task.png)
+![Confirm Task Deletion](delete-task.png)
 
 How it works:
 - Clicking the Delete button triggers a browser pop-up prompt asking: "Delete this task?"
