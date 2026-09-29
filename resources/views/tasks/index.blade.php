@@ -17,7 +17,7 @@
         <div class="card mb-4 shadow-sm">
             <div class="card-header bg-primary text-white">Add New Task</div>
             <div class="card-body">
-                <form action="{{ route('tasks.store') }}" method="POST">
+                <form action="/tasks" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label class="form-label">Task Name</label>

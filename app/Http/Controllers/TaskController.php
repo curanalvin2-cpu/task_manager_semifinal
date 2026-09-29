@@ -28,7 +28,7 @@ class TaskController extends Controller
             'due_date' => $request->due_date,
         ]);
 
-        return redirect()->route('tasks.index')->with('success', 'Task created successfully!');
+        return redirect('/')->with('success', 'Task created successfully!');
     }
 
     public function edit(Task $task)
@@ -47,13 +47,13 @@ class TaskController extends Controller
 
         $task->update($request->all());
 
-        return redirect()->route('tasks.index')->with('success', 'Task updated successfully!');
+        return redirect('/')->with('success', 'Task updated successfully!');
     }
 
     public function destroy(Task $task)
     {
         $task->delete();
-        return redirect()->route('tasks.index')->with('success', 'Task deleted successfully!');
+        return redirect('/')->with('success', 'Task deleted successfully!');
     }
 
     public function toggleStatus(Task $task)
@@ -61,6 +61,6 @@ class TaskController extends Controller
         $task->status = $task->status === 'Pending' ? 'Completed' : 'Pending';
         $task->save();
 
-        return redirect()->route('tasks.index')->with('success', 'Status updated successfully!');
+        return redirect('/')->with('success', 'Status updated successfully!');
     }
 }

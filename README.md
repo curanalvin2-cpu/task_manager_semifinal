@@ -1,59 +1,88 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Project Code: WST21-PM-2026-SF
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Student Name: Alvin Curan
 
-## About Laravel
+Course & Year: BSIT - 2nd Year
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Section:10
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Database Used: SQLite
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+Features:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Add Task: Create new task entries with a name, optional description, and due date.
+View Tasks: Display all stored tasks in an organized dashboard table.
+Edit Task: Modify task details such as name, description, and target completion date.
+Delete Task: Remove completed or unwanted tasks from the task list.
+Update Status: Toggle task status between Pending and Completed.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Tech Stack & Environment:
 
-### Premium Partners
+Framework: Laravel 10 / 11
+Frontend: Bootstrap 5 & Blade Templates
+Database: SQLite
+Environment: GitHub Codespaces
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Setup & Running Instructions:
 
-## Contributing
+1. Install Dependencies
+composer install
+2. Environment Configuration
+Ensure .env contains your active Codespaces preview domain and SQLite connection:
+APP_URL=[https://your-codespace-name-8000.app.github.dev](https://www.google.com/search?q=https://your-codespace-name-8000.app.github.dev&utm_source=gemini)
+DB_CONNECTION=sqlite
+3. Run Database Migrations
+php artisan migrate
+4. Clear Caches & Start Application
+php artisan config:clear
+php artisan serve
+# Personal Task Manager
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+A web-based personal task manager application built with Laravel, SQLite, and Bootstrap 5.
 
-## Code of Conduct
+Technical Details
+- Framework: Laravel 10 / 11
+- Frontend: Bootstrap 5 & Blade Templates
+- Database: SQLite
+- Environment: GitHub Codespaces
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+Dashboard Walkthrough
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Add a New Task
+![Add a Task](Screenshots/AddTask/add-task.png)
 
-## License
+How it works:
+- Enter a task title inside the Task Name input field (required).
+- Provide additional details or instructions in the Description text area.
+- Select a target completion date using the Due Date picker.
+- Click Save Task to insert the new record into the SQLite database and return a green success alert.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+2. Review and Manage Tasks
+![Review and Manage Tasks](Screenshots/AddTask/review-manage-task.png)
+
+How it works:
+- The Task List table displays all stored tasks with columns for Task ID (#), Task Name, Description, Status, Due Date, and Action controls.
+- The Status column highlights current progress using color-coded badges (e.g., Pending in yellow).
+- Each row features an Edit button to modify task information and a Delete button to remove the record.
+
+3. Edit Existing Task
+![Edit a Task](Screenshots/AddTask/edit-task.png)
+
+How it works:
+- Clicking the Edit button loads the task details into an editable form.
+- You can update the Task Name, Description, Status (switch between Pending and Completed), or Due Date.
+- Click Update Task to submit the PUT request and apply changes, or click Cancel to discard edits and return to the dashboard.
+
+
+4. Delete Confirmation
+![Confirm Task Deletion](Screenshots/AddTask/delete-task.png)
+
+How it works:
+- Clicking the Delete button triggers a browser pop-up prompt asking: "Delete this task?"
+- Selecting OK executes the DELETE route action to permanently remove the task row from the database.
+- Selecting Cancel stops the process and keeps the task unchanged.
